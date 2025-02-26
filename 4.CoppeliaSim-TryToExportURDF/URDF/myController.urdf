@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<robot name="myController">
+    <link name="robot_base">
+        <collision name="myController">
+            <origin xyz="-0.010909 -0.021468 0.779656" rpy="1.570456 3.202183 -3.141489" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_robot_base_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="base_visual">
+            <origin xyz="-0.011306 -0.021453 0.780508" rpy="-1.570993 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_base_visual_vis_1.dae" />
+            </geometry>
+            <material name="base_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="base_link1">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="robot_base" />
+        <child link="link1" />
+        <origin xyz="0.032730 0.268905 0.786036" rpy="1.571198 3.146914 2.588216" />
+    </joint>
+    <link name="link1">
+        <inertial>
+            <origin xyz="0.000479 0.001037 -0.024919" rpy="3.129118 3.141506 1.581422" />
+            <inertia izz="0.01" ixy="-8.8091426514447e-19" ixx="0.01" iyz="-8.4896193244277e-19" iyy="0.01" ixz="-8.9107866051152e-19" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link1">
+            <origin xyz="0.000479 0.001037 -0.024919" rpy="3.129118 3.141506 1.581422" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link1_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link1_visual">
+            <origin xyz="0.000500 0.001000 -0.025000" rpy="-3.141593 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link1_visual_vis_1.dae" />
+            </geometry>
+            <material name="link1_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link1_link2">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link1" />
+        <child link="link2" />
+        <origin xyz="0.000628 0.000002 -0.012454" rpy="-1.571270 3.699331 -3.130785" />
+    </joint>
+    <link name="link2">
+        <inertial>
+            <origin xyz="0.041047 0.068271 -0.001300" rpy="1.570797 3.141592 2.600593" />
+            <inertia izz="0.01" ixy="-8.8091426514447e-20" ixx="0.01" iyz="5.4930086629441e-19" iyy="0.01" ixz="8.8807682206857e-19" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link2">
+            <origin xyz="0.041047 0.068271 -0.001300" rpy="1.570797 3.141592 2.600593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link2_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link2_visual">
+            <origin xyz="0.041047 0.068271 -0.001300" rpy="-1.570795 3.141593 2.600593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link2_visual_vis_1.dae" />
+            </geometry>
+            <material name="link2_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link2_link3">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link2" />
+        <child link="link3" />
+        <origin xyz="0.079671 0.132561 -0.000200" rpy="-1.554696 1.572053 2.616693" />
+    </joint>
+    <link name="link3">
+        <inertial>
+            <origin xyz="0.000987 0.009633 -0.042706" rpy="-0.460225 3.149530 0.019576" />
+            <inertia izz="0.01" ixy="-6.8779075317049e-19" ixx="0.01" iyz="6.3223068578653e-19" iyy="0.01" ixz="-2.1006417091907e-18" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link3">
+            <origin xyz="0.000987 0.009633 -0.042706" rpy="-0.460225 3.149530 0.019576" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link3_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link3_visual">
+            <origin xyz="0.000868 0.009782 -0.042596" rpy="-0.019529 2.670432 1.561931" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link3_visual_vis_1.dae" />
+            </geometry>
+            <material name="link3_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link3_link4">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link3" />
+        <child link="link4" />
+        <origin xyz="0.000152 0.020069 -0.059390" rpy="-0.464838 4.692922 -2.654931" />
+    </joint>
+    <link name="link4">
+        <inertial>
+            <origin xyz="-0.079815 -0.031691 -0.000489" rpy="-0.491259 1.574102 0.067058" />
+            <inertia izz="0.01" ixy="-8.470329472543e-20" ixx="0.01" iyz="4.9932592240641e-19" iyy="0.01" ixz="2.7105054312138e-20" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link4">
+            <origin xyz="-0.079815 -0.031691 -0.000489" rpy="-0.491259 1.574102 0.067058" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link4_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link4_visual">
+            <origin xyz="-0.079292 -0.031902 -0.002314" rpy="1.289459 4.658836 -0.737517" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link4_visual_vis_1.dae" />
+            </geometry>
+            <material name="link4_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link4_link5">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link4" />
+        <child link="link5" />
+        <origin xyz="-0.154375 -0.097428 -0.000320" rpy="-1.569750 3.160229 2.384546" />
+    </joint>
+    <link name="link5">
+        <inertial>
+            <origin xyz="0.000003 0.001270 0.027499" rpy="-3.141592 3.140999 -3.141318" />
+            <inertia izz="0.01" ixy="2.168404344971e-18" ixx="0.01" iyz="1.6263032587283e-18" iyy="0.01" ixz="-2.2158381900172e-18" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link5">
+            <origin xyz="0.000003 0.001270 0.027499" rpy="-3.141592 3.140999 -3.141318" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link5_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link5_visual">
+            <origin xyz="-0.000009 0.001271 0.027503" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link5_visual_vis_1.dae" />
+            </geometry>
+            <material name="link5_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link5_link6">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link5" />
+        <child link="link6" />
+        <origin xyz="0.000058 -0.000931 0.039810" rpy="-1.573579 2.442497 -0.007204" />
+    </joint>
+    <link name="link6">
+        <inertial>
+            <origin xyz="-0.014285 0.053237 0.000103" rpy="-3.083172 1.587237 2.204153" />
+            <inertia izz="0.01" ixy="1.1926223897341e-18" ixx="0.01" iyz="1.2112571145736e-18" iyy="0.01" ixz="1.7347234759768e-18" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link6">
+            <origin xyz="-0.014285 0.053237 0.000103" rpy="-3.083172 1.587237 2.204153" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link6_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link6_visual">
+            <origin xyz="-0.014292 0.053245 0.000130" rpy="0.077651 1.586725 2.223328" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link6_visual_vis_1.dae" />
+            </geometry>
+            <material name="link6_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link6_link7">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link6" />
+        <child link="link7" />
+        <origin xyz="-0.067022 0.086687 -0.000666" rpy="-1.672351 4.651344 1.633857" />
+    </joint>
+    <link name="link7">
+        <inertial>
+            <origin xyz="0.001491 -0.066740 0.064908" rpy="-1.110531 3.137229 0.025433" />
+            <inertia izz="0.01" ixy="-2.0328790734103e-18" ixx="0.01" iyz="-2.1125531100114e-18" iyy="0.01" ixz="-2.8731357570866e-18" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link7">
+            <origin xyz="0.001491 -0.066740 0.064908" rpy="-1.110531 3.137229 0.025433" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link7_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link7_visual">
+            <origin xyz="0.002519 -0.109318 0.076970" rpy="1.579148 2.138547 1.603288" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link7_visual_vis_1.dae" />
+            </geometry>
+            <material name="link7_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="base_link8">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="robot_base" />
+        <child link="link8" />
+        <origin xyz="0.033930 -0.312395 0.786636" rpy="1.580091 3.136571 0.560166" />
+    </joint>
+    <link name="link8">
+        <inertial>
+            <origin xyz="0.000484 0.001038 -0.024920" rpy="-3.141391 3.128985 -3.131337" />
+            <inertia izz="0.01" ixy="-8.1315162936413e-20" ixx="0.01" iyz="-7.4538899358378e-19" iyy="0.01" ixz="-2.3145175283724e-19" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link8">
+            <origin xyz="0.000484 0.001038 -0.024920" rpy="-3.141391 3.128985 -3.131337" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link8_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link8_visual">
+            <origin xyz="0.000500 0.001000 -0.025000" rpy="3.141593 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link8_visual_vis_1.dae" />
+            </geometry>
+            <material name="link8_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link8_link9">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link8" />
+        <child link="link9" />
+        <origin xyz="0.000628 0.000002 -0.012454" rpy="-1.571260 3.663552 -3.130805" />
+    </joint>
+    <link name="link9">
+        <inertial>
+            <origin xyz="0.041047 0.068271 -0.001300" rpy="1.570797 3.141590 2.600590" />
+            <inertia izz="0.01" ixy="7.0473141211558e-19" ixx="0.01" iyz="2.5478751053409e-18" iyy="0.01" ixz="-3.479187830847e-19" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link9">
+            <origin xyz="0.041047 0.068271 -0.001300" rpy="1.570797 3.141590 2.600590" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link9_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link9_visual">
+            <origin xyz="0.041047 0.068271 -0.001300" rpy="-1.570795 3.141593 2.600593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link9_visual_vis_1.dae" />
+            </geometry>
+            <material name="link9_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link9_link10">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link9" />
+        <child link="link10" />
+        <origin xyz="0.079671 0.132561 -0.000200" rpy="1.554696 4.711133 -0.524900" />
+    </joint>
+    <link name="link10">
+        <inertial>
+            <origin xyz="0.000981 0.009630 -0.042706" rpy="0.459725 3.133750 -3.122556" />
+            <inertia izz="0.01" ixy="-1.2671612890924e-18" ixx="0.01" iyz="-1.512483206441e-19" iyy="0.01" ixz="2.9070170749768e-18" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link10">
+            <origin xyz="0.000981 0.009630 -0.042706" rpy="0.459725 3.133750 -3.122556" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link10_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link10_visual">
+            <origin xyz="0.000868 0.009782 -0.042596" rpy="-0.019529 2.670432 1.561931" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link10_visual_vis_1.dae" />
+            </geometry>
+            <material name="link10_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link10_link11">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link10" />
+        <child link="link11" />
+        <origin xyz="0.000152 0.020069 -0.059390" rpy="-0.000050 4.694988 -3.119796" />
+    </joint>
+    <link name="link11">
+        <inertial>
+            <origin xyz="-0.079811 -0.031701 -0.000489" rpy="0.491685 4.709083 -3.074751" />
+            <inertia izz="0.01" ixy="-3.7269449679189e-19" ixx="0.01" iyz="-2.2560193154526e-19" iyy="0.01" ixz="-6.4374503991327e-19" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link11">
+            <origin xyz="-0.079811 -0.031701 -0.000489" rpy="0.491685 4.709083 -3.074751" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link11_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link11_visual">
+            <origin xyz="-0.079292 -0.031902 -0.002314" rpy="1.289459 4.658836 -0.737517" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link11_visual_vis_1.dae" />
+            </geometry>
+            <material name="link11_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link11_link12">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link11" />
+        <child link="link12" />
+        <origin xyz="-0.154375 -0.097428 -0.000320" rpy="-1.569750 3.106124 2.384602" />
+    </joint>
+    <link name="link12">
+        <inertial>
+            <origin xyz="-0.000011 0.001277 0.027500" rpy="3.141367 3.142229 -1.570926" />
+            <inertia izz="0.01" ixy="3.2526065174565e-19" ixx="0.01" iyz="1.1371417316889e-19" iyy="0.01" ixz="-3.6591823321386e-18" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link12">
+            <origin xyz="-0.000011 0.001277 0.027500" rpy="3.141367 3.142229 -1.570926" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link12_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link12_visual">
+            <origin xyz="-0.000009 0.001271 0.027503" rpy="-3.141593 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link12_visual_vis_1.dae" />
+            </geometry>
+            <material name="link12_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link12_link13">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link12" />
+        <child link="link13" />
+        <origin xyz="0.000058 -0.000931 0.039810" rpy="-1.573630 2.421553 -0.007282" />
+    </joint>
+    <link name="link13">
+        <inertial>
+            <origin xyz="-0.014294 0.053251 0.000103" rpy="3.083173 4.695948 -0.937440" />
+            <inertia izz="0.01" ixy="-8.673617379884e-19" ixx="0.01" iyz="-1.0333801956502e-19" iyy="0.01" ixz="-2.9815559743351e-19" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link13">
+            <origin xyz="-0.014294 0.053251 0.000103" rpy="3.083173 4.695948 -0.937440" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link13_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link13_visual">
+            <origin xyz="-0.014292 0.053245 0.000130" rpy="0.077651 1.586725 2.223328" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link13_visual_vis_1.dae" />
+            </geometry>
+            <material name="link13_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="link13_link14">
+        <axis xyz="0 0 1" />
+        <limit effort="1000.0" velocity="6.28318530718" upper="3.14159265359" lower="-3.14159265359" />
+        <parent link="link13" />
+        <child link="link14" />
+        <origin xyz="-0.067022 0.086687 -0.000666" rpy="-1.805895 4.685834 1.767510" />
+    </joint>
+    <link name="link14">
+        <inertial>
+            <origin xyz="0.001451 -0.066736 0.064906" rpy="-2.031452 3.155499 -3.110622" />
+            <inertia izz="0.01" ixy="-3.1983964088322e-18" ixx="0.01" iyz="-3.307663659028e-18" iyy="0.01" ixz="-3.144186300208e-18" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="link14">
+            <origin xyz="0.001451 -0.066736 0.064906" rpy="-2.031452 3.155499 -3.110622" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link14_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="link14_visual">
+            <origin xyz="0.002519 -0.109318 0.076970" rpy="1.579148 2.138547 1.603288" />
+            <geometry>
+                <mesh filename="file://C:/Users/aimech1003/Desktop/coppeliaSim_s570/URDF/myController_link14_visual_vis_1.dae" />
+            </geometry>
+            <material name="link14_visual_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+</robot>
